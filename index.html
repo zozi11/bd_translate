@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>恭喜，站点创建成功！</title>
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/translate.js?v=4"></script>
+</head>
+<body>
+	<div class="container" style="margin-top:9%;">
+  		<div class="jumbotron">
+	<select style="float:right;height:35px;line-height:35px;font-size:22px;" id="change_lang">
+	    <option value=''>===请选择翻译语言===</option>
+	    <option value="en">英语</option>
+	    <option value="zh">中文</option>
+<option value="zh">繁体中文</option>
+<option value="jp">日语</option>
+<option value="kor">韩语</option>
+<option value="fra">法语</option>
+<option value="spa">西班牙语</option>
+<option value="th">泰语</option>
+<option value="ara">阿拉伯语</option>
+<option value="ru">俄语</option>
+<option value="pt">葡萄牙语</option>
+<option value="de">德语</option>
+<option value="it">意大利语</option>
+<option value="el">希腊语</option>
+<option value="nl">荷兰语</option>
+<option value="pl">波兰语</option>
+<option value="bul">保加利亚语</option>
+<option value="est">爱沙尼亚语</option>
+<option value="dan">丹麦语</option>
+<option value="fin">芬兰语</option>
+<option value="cs">捷克语</option>
+<option value="rom">罗马尼亚语</option>
+<option value="slo">斯洛文尼亚语</option>
+<option value="swe">瑞典语</option>
+<option value="hu">匈牙利语</option>
+<option value="vie">越南语</option>
+	</select>
+        <div class="panel panel-success">
+        <div class="panel-heading"><h1>恭喜, 站点创建成功！</h1></div>
+        </div>
+          <p><h3>站点创建成功，本页面由系统自动生成。</h3></p>
+          <p><li>本页面在FTP根目录下的index.html</li></p>
+          <p><li>您可以删除或覆盖本页面</li></p>
+          <p><li>FTP相关信息，请到宝塔后台查看</li></p>
+          <p><li>我们为您提供了完善的数据备份功能，请到后台进行相关设置</li></p>
+        </div>
+	</div>
+</body>
+<script>
+$(function(){
+    $(document).off('change','#change_lang').on('change','#change_lang',function(){
+        //调用方式： translate_tags(tags_str,from,to)   需要翻译的标签名，从什么语言（默认可以auto），翻译到什么语言（必须指定）
+        translate_tags('title,p,li,div,h1,h2,h3,h4,h5','auto',$(this).val());
+    });
+});
+
+
+</script>
+</html>
